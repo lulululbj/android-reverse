@@ -399,6 +399,6 @@ private void parseOther() {
 
 由于属性种类众多，这里未对属性就行详细解析，仅为了加深对 Class 文件结构的了解，相当于一个低配版的 javap 。
 
-Class 文件结构的基本了解就到这里，文中相关文件和 Class 文件解析工程源码都在这里， [android-reverse](https://github.com/lulululbj/android-reverse/chttps://github.com/lulululbj/android-reverse/tree/master/class)。
+Class 文件结构的基本了解就到这里，文中相关文件和 Class 文件解析工程源码都在这里， [android-reverse](https://github.com/lulululbj/android-reverse/tree/master/classrse/tree/master/class)。
 
 下一篇开始学习 `smali` 语言。
