@@ -215,7 +215,7 @@ private static String HELLO_WORLD = "Hello World!";
 
 这个属性比较简单，下面来看 `main` 方法表中的属性表，该属性表所代表的是 `main` 方法中的代码经过编译编译生成的字节码：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_method_main.png)
+![](/img/class_method_main.png)
 
 可以看到 `main` 方法的方法表中包含了一个属性，其结构还是比较复杂的，下面进行逐项分析。
 
