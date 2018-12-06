@@ -43,19 +43,19 @@ public class Hello {
 ```
 `javac` 命令编译生成 `Hello.class` 文件。这里推荐一个利器 `010Editor`,查看分析各种二进制文件结构十分方便，相比 `Winhex` 或者 `Ghex` 更加智能。下面是通过 `010Editor` 打开 `Hello.class` 文件的截图：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/010_hello_class.png)
+![](/img/010_hello_class.png)
 
 文件结构一目了然。点击各个结构也会自动标记处上半部分文件内容中对应的十六进制数据，相当方便。下面就对照着结构目录逐项解析。
 
 ### magic
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_magic.png)
+![](/img/class_magic.png)
 
 class 文件的魔数很有意思,  `0xCAFEBABE`,也许 Java 创始人真的很热衷于咖啡吧，包括 Java 的图标也是一杯咖啡。
 
 ### minor_version && major_version
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_version.png)
+![](/img/class_version.png)
 
 `minor_version` 是次版本号，`major_version` 是主版本号。每个版本的 JDK 都有自己特定的版本号。高版本的 JDK 向下兼容低版本的 Class 文件，但低版本不能运行高版本的 Class 文件，即使文件格式没有发生任何变化，虚拟机也拒绝执行高于其版本号的 Class 文件。上面图中主版本号为 52，代表 JDK 1.8，在 JDK 1.8 以下的版本是无法执行的。
 
@@ -63,7 +63,7 @@ class 文件的魔数很有意思,  `0xCAFEBABE`,也许 Java 创始人真的很�
 
 常量池是 Class 文件中的重中之重，存放着各种数据类型，与其他项目关联甚多。在解析的时候，我们可以把常量池看成一个数组或者集合，既然是数组或者集合，就要先确定它的长度。首先看一下 `Hello.class` 文件的常量池部分的截图：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_constant_pool.png)
+![](/img/class_constant_pool.png)
 
 常量池部分以一个 u2 类型开头，代表常量池中的容量，上例中为 `34`。需要注意的是，常量池的下标是从 `1` 开始的，也就代表该 Class 文件具有 33 个常量。那么，为什么下标要从 1 开始呢？目的是为了表示在特定情况下 `不引用任何一个常量池项`，这时候下标就用 `0` 表示。
 
@@ -91,21 +91,21 @@ class 文件的魔数很有意思,  `0xCAFEBABE`,也许 Java 创始人真的很�
 
 首先看 Hello.class 文件常量池的第一项：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_pool0.png)
+![](/img/class_pool0.png)
 
 这是一个 `CONSTANT_Methodref_info` , 表示类中方法的一些信息，它的数据结构是 `tag` `class_index` `name_and_type_index`。`tag` 标识为 10。`class_index`的值是 7，这是一个常量池索引，指向常量池中的某一项数据。注意，常量池的索引是从 1 开始的，所以这里指向的其实是第 6 个数据项：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_constant_class.png)
+![](/img/class_constant_class.png)
 
 `CONSTANT_Methodref_info` 的 `class_index` 指向的数据项永远是 `CONSTANT_Class_info`，`tag` 标识为 7，代表的是类或者接口，它的 `name_index` 也是常量池索引，上图中可以看到是第 26 项:
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_pool26.png)
+![](/img/class_pool26.png)
 
 这是一个 `CONSTANT_Utf8_info`，从名称就可以看出来这是一个字符串，`length` 属性标识长度，后面的 `byte[]` 代表字符串内容。从 010Editor 解析内容可以看到这个字符串是 `java/lang/Object`,表示类的全限定名。
 
 接着回到常量池第一项 `CONSTANT_Methodref_info`，刚才看了 `name_index` 属性，另一个属性是 `name_and_type_index`，它永远指向 `CONSTANT_NameAndType_info`,表示字段或者方法，它的值为 19，我们来看一下常量池的第 18 项：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_pool18.png)
+![](/img/class_pool18.png)
 
 `CONSTANT_NameAndType_info` 的 tag 标识为 12，具有两个属性, `name_index` 和 `descriptor_index`，它们指向的均是 `CONSTANT_Utf8_info`。`name_index` 表示字段或者方法的非限定名，这里的值是 `<init>`。`descriptor_index`表示字段描述符或者方法描述符，这里的值是 `()V`。
 
@@ -113,7 +113,7 @@ class 文件的魔数很有意思,  `0xCAFEBABE`,也许 Java 创始人真的很�
 
 接着继续分析常量池之后的文件结构，先总体浏览一下：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_after_pool.png)
+![](/img/class_after_pool.png)
 
 ### access_flags
 
@@ -148,7 +148,7 @@ private static String HELLO_WORLD = "Hello World!";
 
 上面这行变量声明告诉我们，有一个叫 `HELLO_WORLD` 的 `String` 类型变量，且是 `private static` 修饰的。所以 `fields[]` 所需存储的也正是这些信息。先来看下 `filed_info` 的结构：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_field.png)
+![](/img/class_field.png)
 
 `access_flags`是访问标志，表示字段的访问权限和基本属性，和之前分析过的类的访问标志是很相似的。下表是一些常见的访问标志的名称和含义：
 
@@ -176,7 +176,7 @@ private static String HELLO_WORLD = "Hello World!";
 
 紧接着字段表集合的是方法表集合，表示类中的方法。方法表集合和字段表集合的结构很相似，如下图所示：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_method.png)
+![](/img/class_method.png)
 
 `access_flags` 表示访问标志，其标志值和字段表略有不同，如下所示：
 
@@ -203,7 +203,7 @@ private static String HELLO_WORLD = "Hello World!";
 
 首先来看下 `Hello.class` 文件中紧跟在方法表之后的最后两项。
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/class_attribute.png)
+![](/img/class_attribute.png)
 
 `attributes_count` 声明后面的属性表长度，这里为 1，后面跟了一个属性。由上图该属性结构可知，这是一个定长的属性，但是大部分属性类型其实是不定长的。
 
@@ -256,8 +256,8 @@ B2 00 02 B2 00 03 B6 00 04 B1
 
 结果如下图所示：
 
-![](http://ofdkfbou7.bkt.clouddn.com/blog/javap1.png)
-![](http://ofdkfbou7.bkt.clouddn.com/blog/javap2.png)
+![](/img/javap1.png)
+![](/img//javap2.png)
 
 ## 代码解析
 
