@@ -2,39 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f8a047c4-445c-45f8-82a7-459202a67458" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/android/util/TypedValue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/ClassParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/Attribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/Clazz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/Constant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantFieldRef.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantMethodref.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantNameAndType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantString.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantTag.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/ConstantUtf8.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/Field.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/classes/bean/Method.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/utils/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/utils/TransformUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/utils/Utils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/XmlParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/Attribute.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/NameSpace.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/Xml.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/chunk/Chunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/chunk/EndNameSpaceChunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/chunk/EndTagChunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/chunk/StartNameSpaceChunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/chunk/StartTagChunk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/luyao/xmlparser/classes/ClassParserTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/luyao/xmlparser/xml/XmlParserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../class/ClassParser/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/ClassParser/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../class/ClassParser/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/ClassParser/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../class/ClassParser/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../class/ClassParser/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/Xml.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/Xml.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -73,8 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/Xml.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+            <state relative-caret-position="62">
+              <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -339,7 +307,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544777728546" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544777873419" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
@@ -912,8 +880,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/luyao/xmlparser/xml/bean/Xml.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="37" column="12" selection-start-line="37" selection-start-column="12" selection-end-line="37" selection-end-column="12" />
+        <state relative-caret-position="62">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
