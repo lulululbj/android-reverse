@@ -1,7 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b85f667a-50e6-4452-9bc1-2a5e03c3d85e" name="Default Changelist" comment="" />
+    <list default="true" id="98791c0c-2c65-4c59-8208-5f79083e65f7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/android/util/TypedValue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/ClassParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/Attribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/Clazz.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/Constant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantFieldRef.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantMethodref.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantNameAndType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantString.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantTag.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/ConstantUtf8.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/Field.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/classes/bean/Method.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/utils/Reader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/utils/TransformUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/utils/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/xml/XmlParser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/xml/bean/Attribute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/xml/bean/AttributeType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/java/luyao/xmlparser/xml/bean/Xml.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/main/resources/AndroidManifest.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/test/java/luyao/xmlparser/classes/ClassParserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../xml/XmlParser/src/test/java/luyao/xmlparser/xml/XmlParserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -16,84 +45,30 @@
       <ProjectState />
     </projectState>
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="1296921597">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="2" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.opened" value="9" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="class" value="4" />
-          <entry key="gradle" value="2" />
-          <entry key="java" value="29" />
-          <entry key="smali" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CLASS" value="4" />
-          <entry key="Groovy" value="2" />
-          <entry key="JAVA" value="29" />
-          <entry key="Smali" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="java" value="1028" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="JAVA" value="1028" />
-        </counts>
-      </usages-collector>
-    </session>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="255">
+              <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/Hello.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/ClassParser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2603">
-              <caret line="137" selection-start-line="137" selection-end-line="137" />
+            <state relative-caret-position="34">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#458#459#0" expanded="true" />
                 <element signature="e#504#505#0" expanded="true" />
               </folding>
@@ -102,383 +77,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Method.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Attribute.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="13" selection-start-line="13" selection-end-line="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/utils/Reader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1463">
-              <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="267">
+              <caret line="111" column="61" lean-forward="true" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>readInt</find>
-    </findStrings>
-    <replaceStrings>
-      <replace>readUnsignedShort</replace>
-    </replaceStrings>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-9" />
+    <option name="width" value="1446" />
+    <option name="height" value="876" />
   </component>
-  <component name="GradleLocalSettings">
-    <option name="myGradleHomes">
-      <map>
-        <entry key="$PROJECT_DIR$" value="/opt/android-studio/gradle/gradle-4.4" />
-      </map>
-    </option>
-    <option name="myGradleVersions">
-      <map>
-        <entry key="$PROJECT_DIR$" value="4.4" />
-      </map>
-    </option>
-    <option name="availableProjects">
-      <map>
-        <entry>
-          <key>
-            <ExternalProjectPojo>
-              <option name="name" value="ClassParser" />
-              <option name="path" value="$PROJECT_DIR$" />
-            </ExternalProjectPojo>
-          </key>
-          <value>
-            <list>
-              <ExternalProjectPojo>
-                <option name="name" value="ClassParser" />
-                <option name="path" value="$PROJECT_DIR$" />
-              </ExternalProjectPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="availableTasks">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <list>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the components produced by root project 'ClassParser'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="components" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildDependents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the sub-projects of root project 'ClassParser'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="projects" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="classes" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the dependent components of components in root project 'ClassParser'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependentComponents" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all buildscript dependencies declared in root project 'ClassParser'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildEnvironment" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Gradle wrapper files." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="wrapper" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles test classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="testClasses" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Generates Javadoc API documentation for the main source code." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="javadoc" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles a jar archive containing the main classes." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="jar" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the configuration model of root project 'ClassParser'. [incubating]" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes main resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the tasks runnable from root project 'ClassParser'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="tasks" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Initializes a new Gradle build." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="init" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs the unit tests." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="test" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles main Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the insight into a specific dependency in root project 'ClassParser'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencyInsight" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Runs all checks." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="check" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles the outputs of this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="assemble" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Deletes the build directory." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="clean" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Compiles test Java source." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="compileTestJava" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays all dependencies declared in root project 'ClassParser'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="dependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Processes test resources." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="processTestResources" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays a help message." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="help" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="build" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Assembles and tests this project and all projects it depends on." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="buildNeeded" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Displays the properties of root project 'ClassParser'." />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="properties" />
-              </ExternalTaskPojo>
-            </list>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="modificationStamps">
-      <map>
-        <entry key="$PROJECT_DIR$" value="4603660315000" />
-        <entry key="$PROJECT_DIR$/.gradle" value="0" />
-        <entry key="$PROJECT_DIR$/build.gradle" value="3675238844" />
-        <entry key="$PROJECT_DIR$/settings.gradle" value="2645899951" />
-      </map>
-    </option>
-    <option name="projectBuildClasspath">
-      <map>
-        <entry key="$PROJECT_DIR$">
-          <value>
-            <ExternalProjectBuildClasspathPojo>
-              <option name="modulesBuildClasspath">
-                <map>
-                  <entry key="$PROJECT_DIR$">
-                    <value>
-                      <ExternalModuleBuildClasspathPojo>
-                        <option name="path" value="$PROJECT_DIR$" />
-                      </ExternalModuleBuildClasspathPojo>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-              <option name="name" value="ClassParser" />
-              <option name="projectBuildClasspath">
-                <list>
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-tooling-api-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-logging-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-cli-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-wrapper-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-persistent-cache-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-jvm-services-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/ant-1.9.9.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/ant-launcher-1.9.9.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-core-api-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-resources-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-runtime-api-info-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-model-groovy-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-kotlin-dsl-0.13.1.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-core-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-base-services-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-native-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-model-core-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-kotlin-dsl-tooling-models-0.13.1.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-kotlin-dsl-tooling-builders-0.13.1.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-base-services-groovy-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-build-option-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-build-cache-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-docs-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-installation-beacon-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/groovy-all-2.4.12.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-process-services-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-launcher-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/gradle-messaging-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-platform-native-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-announce-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-tooling-api-builders-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-build-init-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-antlr-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-platform-play-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-build-cache-http-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-plugin-development-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-osgi-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-ivy-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-maven-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-build-comparison-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-language-scala-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-language-native-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-plugins-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-test-kit-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-ide-native-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-workers-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-reporting-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-ide-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-code-quality-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-testing-base-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-composite-builds-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-testing-jvm-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-resources-s3-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-resources-sftp-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-testing-native-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-scala-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-ide-play-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-language-groovy-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-jacoco-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-signing-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-publish-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-language-jvm-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-platform-jvm-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-resources-gcs-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-javascript-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/ivy-2.2.0.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-resources-http-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-dependency-management-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-diagnostics-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-plugin-use-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-version-control-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-platform-base-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-language-java-4.4.jar" />
-                  <option value="/opt/android-studio/gradle/gradle-4.4/lib/plugins/gradle-ear-4.4.jar" />
-                </list>
-              </option>
-            </ExternalProjectBuildClasspathPojo>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="projectSyncType">
-      <map>
-        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
-      </map>
-    </option>
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/utils/XmlReader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantClass.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Constant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantNameAndType.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantFieldRef.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantMethodref.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantString.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantUtf8.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Method.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/utils/Reader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/utils/TransformUtils.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Field.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/ClassParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Attribute.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/Hello.java" />
-        <option value="$PROJECT_DIR$/src/main/java/luyao/classparser/Main.java" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="293" />
-    <option name="y" value="53" />
-    <option name="width" value="1400" />
-    <option name="height" value="1000" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -495,53 +118,35 @@
               <item name="ClassParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClassParser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClassParser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ClassParser" type="b2602c69:ProjectViewProjectNode" />
               <item name="ClassParser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="classparser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ClassParser" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ClassParser" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="classparser" type="462c0819:PsiDirectoryNode" />
-              <item name="classes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544017032702" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544772145778" />
     <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/resources" />
-      <recent name="$PROJECT_DIR$/src/main/java/luyao/classparser" />
-      <recent name="$PROJECT_DIR$/src/main/java/luyao/classparser/utils" />
-      <recent name="$PROJECT_DIR$/src/test" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -556,15 +161,51 @@
     </option>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="luyao.classparser.Main" />
-      <module name="ClassParser_main" />
+      <module name="main" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="luyao.classparser.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -580,249 +221,68 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b85f667a-50e6-4452-9bc1-2a5e03c3d85e" name="Default Changelist" comment="" />
-      <created>1534553329986</created>
+      <changelist id="98791c0c-2c65-4c59-8208-5f79083e65f7" name="Default Changelist" comment="" />
+      <created>1544752054091</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1534553329986</updated>
+      <updated>1544752054091</updated>
     </task>
     <servers />
   </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <frame x="-7" y="-7" width="1721" height="935" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27534625" />
+      <window_info id="Image Layers" />
+      <window_info id="Designer" />
+      <window_info id="UI Designer" />
+      <window_info id="Capture Tool" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24956064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Image Layers" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info id="Capture Tool" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="0" weight="0.32937366" />
-      <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.499723" visible="true" weight="0.40712744" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.39956802" />
-      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="7" weight="0.32937366" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32937366" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.500277" side_tool="true" weight="0.0032397409" />
-      <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Build" order="11" visible="true" weight="0.32937366" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Build" weight="0.3292232" />
+      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3292232" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette" />
+      <window_info anchor="right" id="Gradle" />
+      <window_info anchor="right" id="Theme Preview" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Capture Analysis" />
+      <window_info anchor="right" id="Palette&#9;" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Gradle" order="5" />
-      <window_info anchor="right" id="Theme Preview" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Attribute.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Method.java</url>
-          <line>18</line>
-          <properties />
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/ClassParser.java</url>
-          <line>31</line>
-          <properties />
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Clazz.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/utils/Utils.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/utils/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        <state relative-caret-position="267">
+          <caret line="111" column="61" lean-forward="true" selection-start-line="111" selection-start-column="61" selection-end-line="111" selection-end-column="61" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/Reader.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1070">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Constant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="20" column="41" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantNameAndType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="21" column="31" lean-forward="true" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantMethodref.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="27" column="32" lean-forward="true" selection-start-line="27" selection-start-column="32" selection-end-line="27" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantUtf8.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/ConstantFieldRef.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/Object.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Hello.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Field.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/utils/TransformUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="30" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/io/PrintStream.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5795">
-          <caret line="336" column="16" selection-start-line="336" selection-start-column="16" selection-end-line="336" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/System.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/Hello.smali">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/Hello.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="22" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Method.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/bean/Attribute.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/utils/Reader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1463">
-          <caret line="79" column="5" lean-forward="true" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="255">
+          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/luyao/classparser/classes/ClassParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2603">
-          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        <state relative-caret-position="34">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#458#459#0" expanded="true" />
             <element signature="e#504#505#0" expanded="true" />
           </folding>
@@ -881,7 +341,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>ClassParser_main|ClassParser</last-edited>
+          <last-edited>luyao.classparser.ClassParser</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
