@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luyao.Parser.iml" filepath="$PROJECT_DIR$/.idea/modules/luyao.Parser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luyao.Parser.main.iml" filepath="$PROJECT_DIR$/.idea/modules/luyao.Parser.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/luyao.Parser.test.iml" filepath="$PROJECT_DIR$/.idea/modules/luyao.Parser.test.iml" />
+    </modules>
+  </component>
+</project>
