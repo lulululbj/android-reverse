@@ -1,5 +1,6 @@
 package luyao.parser.utils;
 
+import java.io.DataInputStream;
 import java.io.EOFException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +17,7 @@ public class Reader {
     private volatile InputStream in;
     private byte[] buffer = new byte[8];
     private static boolean showLog = true;
-    private boolean isLittleEndian;
+    private boolean isLittleEndian=true;
 
     public Reader(InputStream in) {
         this(in, true);
@@ -25,16 +26,32 @@ public class Reader {
     public Reader(InputStream in, boolean isLittleEndian) {
         this.in = in;
         this.isLittleEndian = isLittleEndian;
+        DataInputStream dataInputStream=new DataInputStream(in);
     }
 
+    /**
+     *
+     * @param count 字节数
+     * @return 返回 little endian 字节数组
+     * @throws IOException
+     */
     public byte[] read(int count) throws IOException {
+        byte[] b = new byte[count];
+        int read = in.read(b);
+        if (read == -1) throw new EOFException();
+        if (isLittleEndian) return b;
+        else {
+            return reverseBytes(b);
+        }
+    }
+
+    public byte[] readBig(int count) throws IOException {
         byte[] b = new byte[count];
         int read = in.read(b);
         if (read == -1) throw new EOFException();
         if (!isLittleEndian) return b;
         else {
-            b = reverseBytes(b);
-            return b;
+            return reverseBytes(b);
         }
     }
 
@@ -42,7 +59,7 @@ public class Reader {
     public byte[] read(byte[] buffer) throws IOException {
         int read = in.read(buffer);
         if (read == -1) throw new EOFException();
-        if (!isLittleEndian) return buffer;
+        if (isLittleEndian) return buffer;
         else {
             buffer = reverseBytes(buffer);
             return buffer;
@@ -54,7 +71,6 @@ public class Reader {
         int read = in.read(b);
         if (read == -1) throw new EOFException();
         else return b;
-
     }
 
     public byte readByte() throws IOException {
@@ -82,6 +98,11 @@ public class Reader {
         return TransformUtils.bytes2Int(ints);
     }
 
+    public long readUnsignedInt() throws IOException{
+        byte[] ints=read(4);
+        return TransformUtils.bytes2UnsignedInt(ints);
+    }
+
     public long readLong() throws IOException {
         return TransformUtils.bytes2Long(read(8));
     }
@@ -95,7 +116,7 @@ public class Reader {
     }
 
     public String readHexString(int count) throws IOException {
-        return TransformUtils.byte2HexStr(read(count));
+        return TransformUtils.byte2HexStr(readBig(count));
     }
 
     public int avaliable() throws IOException {
@@ -105,6 +126,10 @@ public class Reader {
     public void skip(long count) throws IOException {
         if (count > 0)
             in.skip(count);
+    }
+
+    public void reset() throws IOException {
+        in.reset();
     }
 
     public static void log(String format, Object... params) {

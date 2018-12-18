@@ -14,7 +14,7 @@ public class ClassParserTest {
 
     @Test
     public void parse() {
-        File file=new File("E:\\luyao\\github\\my\\android-reverse\\Parser\\src\\main\\resources/Hello.class");
+        File file=new File("resources/Hello.class");
         try {
             ClassParser classParser=new ClassParser(new FileInputStream(file));
             classParser.parse();

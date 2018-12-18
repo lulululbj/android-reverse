@@ -14,7 +14,7 @@ public class XmlParserTest {
 
     @Test
     public void parse() {
-        File file = new File("/home/luyao/program/my/github/android-reverse/Parser/src/main/resources/AndroidManifest.xml");
+        File file = new File("resources/AndroidManifest.xml");
         try {
             XmlParser xmlParser = new XmlParser(new FileInputStream(file));
             xmlParser.parse();

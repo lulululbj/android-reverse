@@ -10,6 +10,46 @@ import static luyao.parser.utils.Reader.log;
 public class DexHeader {
 
     private Reader reader;
+    public String magic;
+    public long checkSum;
+    public String signature;
+    public int file_size;
+    public int header_size;
+    public int endian_tag;
+
+    public int link_size;
+
+    public int link_off;
+
+    public int map_off;
+
+    public int string_ids__size;
+
+    public int string_ids_off;
+
+    public int type_ids__size;
+
+    public int type_ids_off;
+
+    public int proto_ids__size;
+
+    public int proto_ids_off;
+
+    public int field_ids__size;
+
+    public int field_ids_off;
+
+    public int method_ids_size;
+
+    public int method_ids_off;
+
+    public int class_defs_size;
+
+    public int class_defs_off;
+
+    public int data_size;
+
+    public int data_off;
 
     public DexHeader(Reader reader) {
         this.reader = reader;
@@ -17,73 +57,73 @@ public class DexHeader {
 
     public void parse() {
         try {
-            String magic = TransformUtils.byte2HexStr(reader.readOrigin(8));
+            this.magic = TransformUtils.byte2HexStr(reader.readOrigin(8));
             log("magic: %s", magic);
 
-            int checkSum = reader.readInt();
+            this.checkSum = reader.readUnsignedInt();
             log("checkSum: %d", checkSum);
 
-            String signature = TransformUtils.byte2HexStr(reader.readOrigin(20));
+            this.signature = TransformUtils.byte2HexStr(reader.readOrigin(20));
             log("signature: %s", signature);
 
-            int file_size = reader.readInt();
+            this.file_size = reader.readInt();
             log("file_size: %d", file_size);
 
-            int header_size = reader.readInt();
+            this.header_size = reader.readInt();
             log("header_size: %d", header_size);
 
-            int endian_tag = reader.readInt();
+            this.endian_tag = reader.readInt();
             log("endian_tag: %d", endian_tag);
 
-            int link_size = reader.readInt();
+            this.link_size = reader.readInt();
             log("link_size: %d", link_size);
 
-            int link_off = reader.readInt();
+            this.link_off = reader.readInt();
             log("link_off: %d", link_off);
 
-            int map_off = reader.readInt();
+            this.map_off = reader.readInt();
             log("map_off: %d", map_off);
 
-            int string_ids__size = reader.readInt();
+            this.string_ids__size = reader.readInt();
             log("string_ids__size: %d", string_ids__size);
 
-            int string_ids_off = reader.readInt();
+            this.string_ids_off = reader.readInt();
             log("string_ids_off: %d", string_ids_off);
 
-            int type_ids__size = reader.readInt();
+            this.type_ids__size = reader.readInt();
             log("type_ids__size: %d", type_ids__size);
 
-            int type_ids_off = reader.readInt();
+            this.type_ids_off = reader.readInt();
             log("type_ids_off: %d", type_ids_off);
 
-            int proto_ids__size = reader.readInt();
+            this.proto_ids__size = reader.readInt();
             log("proto_ids__size: %d", proto_ids__size);
 
-            int proto_ids_off = reader.readInt();
+            this.proto_ids_off = reader.readInt();
             log("proto_ids_off: %d", proto_ids_off);
 
-            int field_ids__size = reader.readInt();
+            this.field_ids__size = reader.readInt();
             log("field_ids__size: %d", field_ids__size);
 
-            int field_ids_off = reader.readInt();
+            this.field_ids_off = reader.readInt();
             log("field_ids_off: %d", field_ids_off);
 
-            int method_ids_size = reader.readInt();
+            this.method_ids_size = reader.readInt();
             log("method_ids_size: %d", method_ids_size);
 
-            int method_ids_off = reader.readInt();
+            this.method_ids_off = reader.readInt();
             log("method_ids_off: %d", method_ids_off);
 
-            int class_defs_size = reader.readInt();
+            this.class_defs_size = reader.readInt();
             log("class_defs_size: %d", class_defs_size);
 
-            int class_defs_off = reader.readInt();
+            this.class_defs_off = reader.readInt();
             log("class_defs_off: %d", class_defs_off);
 
-            int data_size = reader.readInt();
+            this.data_size = reader.readInt();
             log("data_size: %d", data_size);
 
-            int data_off = reader.readInt();
+            this.data_off = reader.readInt();
             log("data_off: %d", data_off);
 
         } catch (IOException e) {

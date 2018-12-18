@@ -13,15 +13,24 @@ public class TransformUtils {
     private static final char[] hexCode = "0123456789ABCDEF".toCharArray();
 
     /**
+     * little endian
      * byte[] 转 int
      * this is for little endian
      */
     public static int bytes2Int(byte[] bytes) {
         if (null == bytes || bytes.length == 0) return 0;
-        return (((bytes[0] & 0XFF) << 24)
-                | ((bytes[1] & 0xFF) << 16)
-                | ((bytes[2] & 0xFF) << 8)
-                | (bytes[3] & 0xFF));
+        return (bytes[3] & 0XFF) << 24
+                | (bytes[2] & 0xFF) << 16
+                | (bytes[1] & 0xFF) << 8
+                | bytes[0] & 0xFF;
+    }
+
+    public static long bytes2UnsignedInt(byte[] bytes) {
+        if (null == bytes || bytes.length == 0) return 0;
+        return (long)(bytes[3] & 0XFF) << 24
+                | (bytes[2] & 0xFF) << 16
+                | (bytes[1] & 0xFF) << 8
+                | bytes[0] & 0xFF;
     }
 
     /**
@@ -41,8 +50,8 @@ public class TransformUtils {
      */
     public static short bytes2Short(byte[] bytes) {
         if (null == bytes || bytes.length == 0) return 0;
-        return (short) ((bytes[1] & 0xff) |
-                ((bytes[0] & 0xff)) << 8);
+        return (short) ((bytes[0] & 0xff) |
+                ((bytes[1] & 0xff)) << 8);
     }
 
     /**
@@ -50,8 +59,8 @@ public class TransformUtils {
      */
     public static int bytes2UnsignedShort(byte[] bytes) {
         if (null == bytes || bytes.length == 0) return 0;
-        return ((bytes[1] & 0xff) |
-                ((bytes[0] & 0xff)) << 8);
+        return ((bytes[0] & 0xff) |
+                ((bytes[1] & 0xff)) << 8);
     }
 
     /**
