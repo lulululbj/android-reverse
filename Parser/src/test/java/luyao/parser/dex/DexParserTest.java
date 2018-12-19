@@ -1,5 +1,6 @@
 package luyao.parser.dex;
 
+import luyao.parser.utils.Utils;
 import org.junit.Test;
 
 import java.io.File;
@@ -12,7 +13,7 @@ public class DexParserTest {
     public void parse() {
         File file = new File("resources/Hello.dex");
         try {
-            DexParser dexParser = new DexParser(new FileInputStream(file));
+            DexParser dexParser = new DexParser(new FileInputStream(file), Utils.readAll(file));
             dexParser.parse();
         } catch (FileNotFoundException e) {
             e.printStackTrace();

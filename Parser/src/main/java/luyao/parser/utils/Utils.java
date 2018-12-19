@@ -1,5 +1,8 @@
 package luyao.parser.utils;
 
+import luyao.parser.dex.DexParser;
+
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -60,6 +63,38 @@ public class Utils {
         byte[] result = new byte[byteList.size()];
         for (int i = 0; i < result.length; i++)
             result[i] = byteList.get(i);
+        return result;
+    }
+
+    public static byte[] readAll(File file) {
+        try {
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            InputStream in = new FileInputStream(file);
+            BufferedInputStream bi = new BufferedInputStream(in);
+            byte[] b = new byte[1024];
+            int len = 0;
+            while ((len = bi.read(b)) != -1) {
+                bos.write(b, 0, len);
+            }
+            return bos.toByteArray();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public static int readUnsignedLeb128(byte[] src, int offset) {
+        int result = 0;
+        int count = 0;
+        int cur;
+        do {
+            cur = copy(src, offset, 1)[0];
+            cur &= 0xff;
+            result |= (cur & 0x7f) << count * 7;
+            count++;
+            offset++;
+            DexParser.POSITION++;
+        } while ((cur & 0x80) == 128 && count < 5);
         return result;
     }
 

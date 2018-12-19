@@ -26,7 +26,6 @@ public class Reader {
     public Reader(InputStream in, boolean isLittleEndian) {
         this.in = in;
         this.isLittleEndian = isLittleEndian;
-        DataInputStream dataInputStream=new DataInputStream(in);
     }
 
     /**

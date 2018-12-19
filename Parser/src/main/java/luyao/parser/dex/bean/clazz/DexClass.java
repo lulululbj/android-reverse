@@ -1,4 +1,4 @@
-package luyao.parser.dex.bean;
+package luyao.parser.dex.bean.clazz;
 
 /**
  * Created by luyao
