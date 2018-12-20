@@ -1,85 +1,81 @@
 package luyao.parser.utils;
 
-import java.io.EOFException;
 import java.io.IOException;
-import java.io.InputStream;
 
 import static luyao.parser.utils.TransformUtils.reverseBytes;
 
-
 /**
  * Created by luyao
- * on 2018/8/27 10:26
+ * on 2018/12/20 15:00
  */
-public class Reader {
+public class BytesReader {
 
-    private volatile InputStream in;
-    private byte[] buffer = new byte[8];
-    private static boolean showLog = true;
+    private int position = 0; // 标记顺序读位置
+    private byte[] data;
     private boolean isLittleEndian = true;
 
-    public Reader(InputStream in) {
-        this(in, true);
+    public BytesReader(byte[] data) {
+        this.data = data;
     }
 
-    public Reader(InputStream in, boolean isLittleEndian) {
-        this.in = in;
+    public BytesReader(byte[] data, boolean isLittleEndian) {
+        this.data = data;
         this.isLittleEndian = isLittleEndian;
+    }
+
+    public static byte[] copy(byte[] stringContent, int start, int length) {
+        byte[] b = new byte[length];
+        System.arraycopy(stringContent, start, b, 0, length);
+        return b;
     }
 
     /**
      * @param count 字节数
      * @return 返回 little endian 字节数组
-     * @throws IOException
      */
-    public byte[] read(int count) throws IOException {
-        byte[] b = new byte[count];
-        int read = in.read(b);
-        if (read == -1) throw new EOFException();
+    public byte[] read(int count) {
+        byte[] b = copy(data, position, count);
+        position += count;
         if (isLittleEndian) return b;
         else {
             return reverseBytes(b);
         }
     }
 
-    public byte[] readBig(int count) throws IOException {
-        byte[] b = new byte[count];
-        int read = in.read(b);
-        if (read == -1) throw new EOFException();
+    public byte[] readBig(int count) {
+        byte[] b = copy(data, position, count);
+        position += count;
         if (!isLittleEndian) return b;
         else {
             return reverseBytes(b);
         }
     }
 
-
     public byte[] read(byte[] buffer) throws IOException {
-        int read = in.read(buffer);
-        if (read == -1) throw new EOFException();
+        buffer = copy(data, position, buffer.length);
+        position += buffer.length;
         if (isLittleEndian) return buffer;
         else {
-            buffer = reverseBytes(buffer);
-            return buffer;
+            return reverseBytes(buffer);
         }
     }
 
     public byte[] readOrigin(int count) throws IOException {
-        byte[] b = new byte[count];
-        int read = in.read(b);
-        if (read == -1) throw new EOFException();
-        else return b;
+        byte[] b = copy(data, position, count);
+        position += count;
+        return b;
     }
 
     public byte readByte() throws IOException {
-        int b = in.read();
-        if (-1 == b) throw new EOFException();
-        return (byte) b;
+        byte b = copy(data, position, 1)[0];
+        position++;
+        return b;
     }
 
     public int readUnsignedByte() throws IOException {
-        int b = in.read();
-        if (-1 == b) throw new EOFException();
-        return (byte) b;
+        byte b = copy(data, position, 1)[0];
+        position++;
+        return b;
     }
 
     public short readShort() throws IOException {
@@ -117,22 +113,17 @@ public class Reader {
     }
 
     public int avaliable() throws IOException {
-        return in.available();
+        return data.length - position;
     }
 
     public void skip(long count) throws IOException {
         if (count > 0)
-            in.skip(count);
+            position += count;
     }
 
     public void reset() throws IOException {
-        in.reset();
+        position = 0;
     }
 
-    public static void log(String format, Object... params) {
-        if (showLog)
-            System.out.printf(format, params);
-        System.out.println();
-    }
 
 }

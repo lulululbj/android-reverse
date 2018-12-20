@@ -1,10 +1,7 @@
 package luyao.parser.dex;
 
 import luyao.parser.dex.bean.*;
-import luyao.parser.dex.bean.clazz.DexClass;
-import luyao.parser.dex.bean.clazz.DexClassData;
-import luyao.parser.dex.bean.clazz.EncodedField;
-import luyao.parser.dex.bean.clazz.EncodedMethod;
+import luyao.parser.dex.bean.clazz.*;
 import luyao.parser.utils.Reader;
 import luyao.parser.utils.TransformUtils;
 import luyao.parser.utils.Utils;
@@ -220,9 +217,11 @@ public class DexParser {
             int code_off = Utils.readUnsignedLeb128(dexData, POSITION);
 
             EncodedMethod encodedMethod = new EncodedMethod(method_idx, access_flags, code_off);
-            DexMethodId dexMethodId=dexMethodIds.get(method_idx);
+            DexMethodId dexMethodId = dexMethodIds.get(method_idx);
             log("   direct method[%d]: %s proto[%d] %s", i, dexTypes.get(dexMethodId.class_idx).string_data,
                     dexMethodId.proto_idx, dexStrings.get(dexMethodId.name_idx).string_data);
+
+            parseDexCode(code_off);
         }
 
         // virtual method
@@ -232,15 +231,27 @@ public class DexParser {
             int code_off = Utils.readUnsignedLeb128(dexData, POSITION);
 
             EncodedMethod encodedMethod = new EncodedMethod(method_idx, access_flags, code_off);
-            DexMethodId dexMethodId=dexMethodIds.get(method_idx);
+            DexMethodId dexMethodId = dexMethodIds.get(method_idx);
             log("   virtual method[%d]: %s proto[%d] %s", i, dexTypes.get(dexMethodId.class_idx).string_data,
                     dexMethodId.proto_idx, dexStrings.get(dexMethodId.name_idx).string_data);
 
-            parseDexCode();
+            parseDexCode(code_off);
         }
     }
 
-    private void parseDexCode(){
-
+    private void parseDexCode(int code_off) {
+        int registers_size = TransformUtils.bytes2UnsignedShort(Utils.copy(dexData, code_off, 2));
+        int ins_size = TransformUtils.bytes2UnsignedShort(Utils.copy(dexData, code_off + 2, 2));
+        int outs_size = TransformUtils.bytes2UnsignedShort(Utils.copy(dexData, code_off + 4, 2));
+        int tries_size = TransformUtils.bytes2UnsignedShort(Utils.copy(dexData, code_off + 6, 2));
+        int debug_info_off = TransformUtils.bytes2Int(Utils.copy(dexData, code_off + 8, 4));
+        int insns_size = TransformUtils.bytes2Int(Utils.copy(dexData, code_off + 12, 4));
+        int[] insns = new int[insns_size];
+        for (int i = 0; i < insns_size; i++) {
+            int insns_ = TransformUtils.bytes2UnsignedShort(Utils.copy(dexData, code_off + 16 + i * 2, 2));
+            insns[i] = insns_;
+        }
+        DexCode dexCode=new DexCode(registers_size,ins_size,outs_size,tries_size,debug_info_off,insns_size,insns);
+        log("   dexcode: %s",dexCode.toString());
     }
 }
