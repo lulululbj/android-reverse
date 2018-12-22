@@ -22,4 +22,15 @@ public class XmlParserTest {
             e.printStackTrace();
         }
     }
+
+    @Test
+    public void parseWeixin() {
+        File file = new File("resources/AndroidManifest_weixin.xml");
+        try {
+            XmlParser xmlParser = new XmlParser(new FileInputStream(file));
+            xmlParser.parse();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }

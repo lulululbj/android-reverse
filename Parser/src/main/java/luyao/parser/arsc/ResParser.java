@@ -42,13 +42,14 @@ public class ResParser {
             stringPoolHeader.parse(reader);
 
             List<Integer> stringOffsets=new ArrayList<>(stringPoolHeader.stringCount);
+            List<String> stringPoolList = new ArrayList<>();
             for (int i=0;i<stringPoolHeader.stringCount;i++){
                 int offset=reader.readInt();
 
             }
             reader.skip(4 * stringPoolHeader.styleCount); // styleoffsets[]
 
-            List<String> stringPoolList = new ArrayList<>();
+
             for (int i = 0; i < stringPoolHeader.stringCount; i++) {
                 int u16len = reader.readUnsignedByte();
                 int u8len = reader.readUnsignedByte();
