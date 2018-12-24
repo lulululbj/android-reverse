@@ -15,4 +15,14 @@ public class ResSpanStyle {
         this.firstChar = firstChar;
         this.lastChar = lastChar;
     }
+
+
+    @Override
+    public String toString() {
+        return "ResSpanStyle{" +
+                "index=" + index +
+                ", firstChar=" + firstChar +
+                ", lastChar=" + lastChar +
+                '}';
+    }
 }
