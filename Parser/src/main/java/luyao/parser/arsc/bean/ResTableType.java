@@ -1,7 +1,6 @@
 package luyao.parser.arsc.bean;
 
 import luyao.parser.utils.BytesReader;
-import luyao.parser.utils.Reader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,7 +22,7 @@ public class ResTableType {
     public int entriesStart;
     public ResTableConfig config;
     public int[] entryOffsets;
-    public List<ResTableEntry> resTableEntryList=new ArrayList<>();
+    public List<ResTableEntry> resTableEntryList = new ArrayList<>();
 
     public void parse(BytesReader reader) {
         try {
@@ -49,9 +48,8 @@ public class ResTableType {
                     resTableMapEntry.parse(reader);
                     resTableEntryList.add(resTableMapEntry);
                 } else if (flags == 0) {
-                    ResValue resValue=new ResValue();
+                    ResValue resValue = new ResValue();
                     resValue.parse(reader);
-
                 }
             }
 
@@ -63,10 +61,12 @@ public class ResTableType {
 
     public String toString(List<String> keyStringList) {
         for (ResTableEntry resTableEntry : resTableEntryList) {
-            log("keyString: %s",keyStringList.get(resTableEntry.string_pool_index));
-//            if (resTableEntry instanceof ResTableMapEntry){
-//
-//            }
+            log("keyString: %s", keyStringList.get(resTableEntry.string_pool_index));
+            if (resTableEntry instanceof ResTableMapEntry) {
+
+            } else {
+
+            }
         }
         return null;
     }

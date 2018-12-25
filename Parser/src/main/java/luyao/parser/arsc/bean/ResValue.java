@@ -18,7 +18,6 @@ public class ResValue {
 
     public void parse(BytesReader reader) throws IOException {
         this.size = reader.readUnsignedShort();
-        this.size = reader.readUnsignedShort();
         this.res0=reader.readUnsignedByte();
         this.dataType = reader.readByte();
         this.data = reader.readInt();

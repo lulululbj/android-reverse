@@ -25,6 +25,8 @@ public class ResParser {
     private List<String> stringPoolList = new ArrayList<>();
     private List<String> typeStringList = new ArrayList<>();
     private List<String> keyStringList = new ArrayList<>();
+    private List<ResTableType> tableTypeList = new ArrayList<>();
+    private List<ResTableTypeSpec> tableTypeSpecList = new ArrayList<>();
 
     public ResParser(File in) {
         this.reader = new BytesReader(Utils.readAll(in));
@@ -122,18 +124,38 @@ public class ResParser {
                     case ResType.RES_TABLE_TYPE_SPEC_TYPE:
                         ResTableTypeSpec tableTypeSpec = new ResTableTypeSpec(resChunkHeader);
                         tableTypeSpec.parse(reader);
+                        tableTypeSpecList.add(tableTypeSpec);
                         log(tableTypeSpec.toString());
                         break;
 
                     case ResType.RES_TABLE_TYPE_TYPE:
                         ResTableType resTableType = new ResTableType();
                         resTableType.parse(reader);
-                        resTableType.toString(keyStringList);
+                        tableTypeList.add(resTableType);
                         break;
                 }
             }
+            printTableType();
         } catch (Exception e) {
             e.printStackTrace();
+        }
+    }
+
+    private void printTableType() {
+        for (ResTableType tableType : tableTypeList) {
+            List<ResTableEntry> resTableEntryList = tableType.resTableEntryList;
+            for (ResTableEntry tableEntry : resTableEntryList) {
+                if (tableEntry.flags == 0) {
+                    List<ResTableMap> resTableMapList = ((ResTableMapEntry) tableEntry).resTableMapList;
+                    for (ResTableMap resTableMap : resTableMapList) {
+                        log("   ResTableEntry: %s ResValue: %s", keyStringList.get(tableEntry.string_pool_index),
+                                keyStringList.get(resTableMap.resValue.data));
+                    }
+
+                } else if (tableEntry.flags == 1) {
+                    log("   ResTableMapEntry: %s", keyStringList.get(tableEntry.string_pool_index));
+                }
+            }
         }
     }
 }
