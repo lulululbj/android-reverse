@@ -13,7 +13,6 @@ public class EndNameSpaceChunk extends Chunk {
 
     public EndNameSpaceChunk(int chunkSize, int lineNumber, int prefix, int uri) {
         super(Xml.END_NAMESPACE_CHUNK_TYPE);
-        this.chunkType = chunkType;
         this.chunkSize = chunkSize;
         this.lineNumber = lineNumber;
         this.prefix = prefix;

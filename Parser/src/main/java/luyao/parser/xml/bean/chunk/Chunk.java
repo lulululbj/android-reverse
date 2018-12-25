@@ -6,11 +6,11 @@ package luyao.parser.xml.bean.chunk;
  */
 public abstract class Chunk {
 
-    public int chunkType;
-    public int chunkSize;
-    public int lineNumber;
+    int chunkType;
+    int chunkSize;
+    int lineNumber;
 
-    public Chunk(int chunkType){
+    Chunk(int chunkType){
         this.chunkType=chunkType;
     }
 

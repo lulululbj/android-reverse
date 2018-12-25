@@ -25,7 +25,7 @@ public class XmlParserTest {
 
     @Test
     public void parseWeixin() {
-        File file = new File("resources/AndroidManifest_weixin.xml");
+        File file = new File("resources/AndroidManifest_qq.xml");
         try {
             XmlParser xmlParser = new XmlParser(new FileInputStream(file));
             xmlParser.parse();

@@ -130,16 +130,14 @@ public class XmlParser {
             int resourcesIdChunkCount = (chunkSize - 8) / 4;
             for (int i = 0; i < resourcesIdChunkCount; i++) {
                 String resourcesId = reader.readHexString(4);
-                log("resource id: %s", resourcesId);
+                log("resource id[%d]: %s", i, resourcesId);
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     private void parseXmlContentChunk() {
-
         try {
             while (reader.avaliable() > 0) {
                 int chunkType = reader.readInt();
@@ -165,7 +163,6 @@ public class XmlParser {
             e.printStackTrace();
             log("parse XmlContentChunk error!");
         }
-
     }
 
     private void parseStartNamespaceChunk() {
@@ -258,7 +255,7 @@ public class XmlParser {
                 String dataString = type == TypedValue.TYPE_STRING ? stringChunkList.get(data) : TypedValue.coerceToString(type, data);
                 log("   data: %s", dataString);
 
-                Attribute attribute = new Attribute(namespaceUriAttr==-1?null:stringChunkList.get(namespaceUriAttr),
+                Attribute attribute = new Attribute(namespaceUriAttr == -1 ? null : stringChunkList.get(namespaceUriAttr),
                         stringChunkList.get(nameAttr), valueStr, type, dataString);
                 attributes.add(attribute);
             }
