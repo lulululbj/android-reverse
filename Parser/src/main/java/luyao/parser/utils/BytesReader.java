@@ -126,4 +126,17 @@ public class BytesReader {
     }
 
 
+    public int getCurrentPosition() {
+        return position;
+    }
+
+    public byte[] read(int start, int len) {
+        position += len;
+        return copy(data, start, len);
+    }
+
+    public void moveTo(int i) {
+        if (i <= data.length)
+            position = i;
+    }
 }
