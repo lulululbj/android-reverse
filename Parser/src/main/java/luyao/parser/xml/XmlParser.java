@@ -1,7 +1,9 @@
 package luyao.parser.xml;
 
 import android.util.TypedValue;
+import luyao.parser.utils.BytesReader;
 import luyao.parser.utils.Reader;
+import luyao.parser.utils.Utils;
 import luyao.parser.xml.bean.Attribute;
 import luyao.parser.xml.bean.Xml;
 import luyao.parser.xml.bean.chunk.*;
@@ -19,13 +21,13 @@ import static luyao.parser.utils.Reader.log;
  */
 public class XmlParser {
 
-    private Reader reader;
+    private BytesReader reader;
 
     private List<String> stringChunkList = new ArrayList<>();
     private List<Chunk> chunkList = new ArrayList<>();
 
     public XmlParser(InputStream in) {
-        this.reader = new Reader(in, true);
+        this.reader = new BytesReader(Utils.readAll(in), true);
     }
 
     public void parse() {
@@ -111,6 +113,8 @@ public class XmlParser {
                 String string = new String(content);
                 log("   %s", string);
             }
+
+            reader.moveTo(chunkSize+8); // ResourceIdChunk 之前可能存在 0000,应该是为了对齐
 
         } catch (IOException e) {
             e.printStackTrace();
