@@ -19,7 +19,6 @@ public class StartTagChunk extends Chunk {
     private List<Attribute> attributeList;
 
 
-
     public StartTagChunk(int nameSpaceUri, String name, List<Attribute> attributeList) {
         super(Xml.START_TAG_CHUNK_TYPE);
         this.nameSpaceUri = nameSpaceUri;
@@ -53,16 +52,19 @@ public class StartTagChunk extends Chunk {
 
     @Override
     public String toXmlString() {
-        StringBuilder builder=new StringBuilder();
-        System.out.println("test "+name+name.length());
-        if (name.replace(" ","").equals("manifest")) {
+        StringBuilder builder = new StringBuilder();
+        System.out.println("test " + name + name.length());
+        if (name.replace(" ", "").equals("manifest")) {
             builder.append("<manifest");
             for (String key : Xml.nameSpaceMap.keySet()) {
                 Xml.nameSpaceMap.put(Xml.nameSpaceMap.get(key), key);
                 builder.append(XmlParser.format(" xmlns:%s=\"%s\"", key, Xml.nameSpaceMap.get(key)));
             }
         } else {
-            builder.append(XmlParser.format("\n%s<%s", Xml.BLANK, name));
+            if ("intent-filter".equals(name))
+                builder.append(XmlParser.format("\n%s<%s>", Xml.BLANK, name));
+            else
+                builder.append(XmlParser.format("\n%s<%s", Xml.BLANK, name));
         }
         Xml.BLANK.append(blank);
         for (int i = 0; i < attributeList.size(); i++) {
