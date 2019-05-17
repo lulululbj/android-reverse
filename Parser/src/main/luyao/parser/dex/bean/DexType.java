@@ -6,7 +6,7 @@ package luyao.parser.dex.bean;
  */
 public class DexType {
 
-    public int descriptor_idx;
+    public int descriptor_idx; // 指向 string_ids 中的内容
     public String string_data;
 
     public DexType(int descriptor_idx, String string_data) {

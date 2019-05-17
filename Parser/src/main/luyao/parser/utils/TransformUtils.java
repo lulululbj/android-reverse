@@ -12,6 +12,11 @@ public class TransformUtils {
     private static final String hexString = "0123456789ABCDEF";
     private static final char[] hexCode = "0123456789ABCDEF".toCharArray();
 
+
+    public static String bytes2String(byte[] bytes){
+        return new String(bytes,Charset.forName("utf-8"));
+    }
+
     /**
      * little endian
      * byte[] 转 int

@@ -6,9 +6,9 @@ package luyao.parser.dex.bean;
  */
 public class DexFieldId {
 
-    public int class_idx;
-    public int type_idx;
-    public int name_idx;
+    public int class_idx; // 指向 type_ids
+    public int type_idx; // 指向 type_ids
+    public int name_idx; // 指向 string_ids
 
     public DexFieldId(int class_idx, int type_idx, int name_idx) {
         this.class_idx = class_idx;

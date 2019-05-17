@@ -54,7 +54,7 @@ public class DexParser {
             int stringIdsSize = dex.getDexHeader().string_ids__size;
             for (int i = 0; i < stringIdsSize; i++) {
                 int string_data_off = reader.readInt();
-                byte size = dexData[string_data_off];
+                byte size = dexData[string_data_off]; // 第一个字节表示该字符串的长度，之后是字符串内容
                 String string_data = new String(Utils.copy(dexData, string_data_off + 1, size));
                 DexString string = new DexString(string_data_off, string_data);
                 dexStrings.add(string);

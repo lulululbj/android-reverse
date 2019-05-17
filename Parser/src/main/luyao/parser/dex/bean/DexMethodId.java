@@ -6,9 +6,9 @@ package luyao.parser.dex.bean;
  */
 public class DexMethodId {
 
-    public int class_idx;
-    public int proto_idx;
-    public int name_idx;
+    public int class_idx; // 指向 type_ids
+    public int proto_idx; // 指向 proto_ids
+    public int name_idx; // 指向 string_ids
 
     public DexMethodId(int class_idx, int proto_idx, int name_idx) {
         this.class_idx = class_idx;

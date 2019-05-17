@@ -6,8 +6,8 @@ package luyao.parser.dex.bean;
  */
 public class DexString {
 
-    public int string_data_off;
-    public String string_data;
+    public int string_data_off; // 字符串的偏移量
+    public String string_data; // 字符串的内容
 
     public DexString(int string_data_off, String string_data) {
         this.string_data_off = string_data_off;

@@ -6,13 +6,13 @@ package luyao.parser.dex.bean.clazz;
  */
 public class DexClass {
 
-    public int class_idx;
+    public int class_idx; // 指向 type_ids
     public int access_flags;
-    public int superclass_idx;
-    public int interfaces_off;
-    public int source_file_idx;
+    public int superclass_idx; // 指向 type_ids
+    public int interfaces_off; // 指向 type_ids
+    public int source_file_idx; // 指向 string_ids
     public int annotations_off;
-    public int class_data_off;
+    public int class_data_off; // 指向 data 区
     public int staticValuesOff;
 
     public DexClass(int class_idx, int access_flags, int superclass_idx, int interfaces_off, int source_file_idx, int annotations_off, int class_data_off, int staticValuesOff) {

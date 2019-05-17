@@ -6,8 +6,8 @@ package luyao.parser.dex.bean;
  */
 public class DexProtoId {
 
-    public int shorty_idx;
-    public int return_type_idx;
+    public int shorty_idx; // 指向 string_ids
+    public int return_type_idx; // 指向 types_ids
     public int parameters_off;
 
 

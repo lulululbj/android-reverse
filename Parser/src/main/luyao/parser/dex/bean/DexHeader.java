@@ -16,39 +16,22 @@ public class DexHeader {
     public int file_size;
     public int header_size;
     public int endian_tag;
-
     public int link_size;
-
     public int link_off;
-
     public int map_off;
-
     public int string_ids__size;
-
     public int string_ids_off;
-
     public int type_ids__size;
-
     public int type_ids_off;
-
     public int proto_ids__size;
-
     public int proto_ids_off;
-
     public int field_ids__size;
-
     public int field_ids_off;
-
     public int method_ids_size;
-
     public int method_ids_off;
-
     public int class_defs_size;
-
     public int class_defs_off;
-
     public int data_size;
-
     public int data_off;
 
     public DexHeader(Reader reader) {
@@ -57,7 +40,7 @@ public class DexHeader {
 
     public void parse() {
         try {
-            this.magic = TransformUtils.byte2HexStr(reader.readOrigin(8));
+            this.magic = TransformUtils.bytes2String(reader.readOrigin(8));
             log("magic: %s", magic);
 
             this.checkSum = reader.readUnsignedInt();
@@ -73,7 +56,7 @@ public class DexHeader {
             log("header_size: %d", header_size);
 
             this.endian_tag = reader.readInt();
-            log("endian_tag: %d", endian_tag);
+            log("endian_tag: 0x%x", endian_tag);
 
             this.link_size = reader.readInt();
             log("link_size: %d", link_size);
