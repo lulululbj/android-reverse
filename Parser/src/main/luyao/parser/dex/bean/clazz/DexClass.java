@@ -6,6 +6,17 @@ package luyao.parser.dex.bean.clazz;
  */
 public class DexClass {
 
+//    struct DexClassDef {
+//        u4  classIdx;           /* index into typeIds for this class */
+//        u4  accessFlags;
+//        u4  superclassIdx;      /* index into typeIds for superclass */
+//        u4  interfacesOff;      /* file offset to DexTypeList */
+//        u4  sourceFileIdx;      /* index into stringIds for source file name */
+//        u4  annotationsOff;     /* file offset to annotations_directory_item */
+//        u4  classDataOff;       /* file offset to class_data_item */
+//        u4  staticValuesOff;    /* file offset to DexEncodedArray */
+//    };
+
     public int class_idx; // 指向 type_ids
     public int access_flags;
     public int superclass_idx; // 指向 type_ids

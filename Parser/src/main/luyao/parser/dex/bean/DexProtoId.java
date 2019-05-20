@@ -6,6 +6,12 @@ package luyao.parser.dex.bean;
  */
 public class DexProtoId {
 
+//    struct DexProtoId {
+//        u4  shortyIdx;          /* index into stringIds for shorty descriptor */
+//        u4  returnTypeIdx;      /* index into typeIds list for return type */
+//        u4  parametersOff;      /* file offset to type_list for parameter types */
+//    };
+
     public int shorty_idx; // 指向 string_ids
     public int return_type_idx; // 指向 types_ids
     public int parameters_off;

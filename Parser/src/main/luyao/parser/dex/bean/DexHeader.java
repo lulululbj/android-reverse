@@ -9,6 +9,34 @@ import static luyao.parser.utils.Reader.log;
 
 public class DexHeader {
 
+    /*
+    struct DexHeader {
+    u1  magic[8];
+    u4  checksum;
+    u1  signature[kSHA1DigestLen];
+    u4  fileSize;
+    u4  headerSize;
+    u4  endianTag;
+    u4  linkSize;
+    u4  linkOff;
+    u4  mapOff;
+    u4  stringIdsSize;
+    u4  stringIdsOff;
+    u4  typeIdsSize;
+    u4  typeIdsOff;
+    u4  protoIdsSize;
+    u4  protoIdsOff;
+    u4  fieldIdsSize;
+    u4  fieldIdsOff;
+    u4  methodIdsSize;
+    u4  methodIdsOff;
+    u4  classDefsSize;
+    u4  classDefsOff;
+    u4  dataSize;
+    u4  dataOff;
+    }
+    */
+
     private Reader reader;
     public String magic;
     public long checkSum;

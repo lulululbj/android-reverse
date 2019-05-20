@@ -19,8 +19,8 @@ public class DexParser {
     private Dex dex;
     private Reader reader;
     private byte[] dexData;
-    private List<DexString> dexStrings = new ArrayList<>();
-    private List<DexType> dexTypes = new ArrayList<>();
+    private List<DexStringId> dexStringIds = new ArrayList<>();
+    private List<DexTypeId> dexTypeIds = new ArrayList<>();
     private List<DexProtoId> dexProtos = new ArrayList<>();
     private List<DexFieldId> dexFieldIds = new ArrayList<>();
     private List<DexMethodId> dexMethodIds = new ArrayList<>();
@@ -49,15 +49,15 @@ public class DexParser {
     }
 
     private void parseDexString() {
-        log("\nparse DexString");
+        log("\nparse DexStringId");
         try {
             int stringIdsSize = dex.getDexHeader().string_ids__size;
             for (int i = 0; i < stringIdsSize; i++) {
                 int string_data_off = reader.readInt();
                 byte size = dexData[string_data_off]; // 第一个字节表示该字符串的长度，之后是字符串内容
                 String string_data = new String(Utils.copy(dexData, string_data_off + 1, size));
-                DexString string = new DexString(string_data_off, string_data);
-                dexStrings.add(string);
+                DexStringId string = new DexStringId(string_data_off, string_data);
+                dexStringIds.add(string);
                 log("string[%d] data: %s", i, string.string_data);
             }
         } catch (IOException e) {
@@ -66,14 +66,14 @@ public class DexParser {
     }
 
     private void parseDexType() {
-        log("\nparse DexType");
+        log("\nparse DexTypeId");
         try {
             int typeIdsSize = dex.getDexHeader().type_ids__size;
             for (int i = 0; i < typeIdsSize; i++) {
                 int descriptor_idx = reader.readInt();
-                DexType dexType = new DexType(descriptor_idx, dexStrings.get(descriptor_idx).string_data);
-                dexTypes.add(dexType);
-                log("type[%d] data: %s", i, dexType.string_data);
+                DexTypeId dexTypeId = new DexTypeId(descriptor_idx, dexStringIds.get(descriptor_idx).string_data);
+                dexTypeIds.add(dexTypeId);
+                log("type[%d] data: %s", i, dexTypeId.string_data);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -90,8 +90,8 @@ public class DexParser {
                 int parameters_off = reader.readInt();
 
                 DexProtoId dexProtoId = new DexProtoId(shorty_idx, return_type_idx, parameters_off);
-                log("proto[%d]: %s %s %d", i, dexStrings.get(shorty_idx).string_data,
-                        dexTypes.get(return_type_idx).string_data, parameters_off);
+                log("proto[%d]: %s %s %d", i, dexStringIds.get(shorty_idx).string_data,
+                        dexTypeIds.get(return_type_idx).string_data, parameters_off);
 
                 if (parameters_off > 0) {
                     parseDexProtoParameters(parameters_off);
@@ -108,7 +108,7 @@ public class DexParser {
         int size = TransformUtils.bytes2Int(Utils.copy(dexData, parameters_off, 4));
         for (int i = 0; i < size; i++) {
             int typeIdx = TransformUtils.bytes2UnsignedShort(Utils.copy(dexData, parameters_off + i * 2 + 4, 2));
-            log("parameters[%d]: %s", i, dexTypes.get(typeIdx).string_data);
+            log("parameters[%d]: %s", i, dexTypeIds.get(typeIdx).string_data);
         }
     }
 
@@ -122,8 +122,8 @@ public class DexParser {
                 int name_idx = reader.readInt();
                 DexFieldId dexFieldId = new DexFieldId(class_idx, type_idx, name_idx);
 //                LHello;->HELLO_WORLD:Ljava/lang/String;
-                log("field[%d]: %s->%s;%s", i, dexTypes.get(class_idx).string_data,
-                        dexStrings.get(name_idx).string_data, dexTypes.get(type_idx).string_data);
+                log("field[%d]: %s->%s;%s", i, dexTypeIds.get(class_idx).string_data,
+                        dexStringIds.get(name_idx).string_data, dexTypeIds.get(type_idx).string_data);
                 dexFieldIds.add(dexFieldId);
             }
         } catch (IOException e) {
@@ -140,8 +140,8 @@ public class DexParser {
                 int proto_idx = reader.readUnsignedShort();
                 int name_idx = reader.readInt();
                 DexMethodId dexMethodId = new DexMethodId(class_idx, proto_idx, name_idx);
-                log("method[%d]: %s proto[%d] %s", i, dexTypes.get(class_idx).string_data,
-                        proto_idx, dexStrings.get(name_idx).string_data);
+                log("method[%d]: %s proto[%d] %s", i, dexTypeIds.get(class_idx).string_data,
+                        proto_idx, dexStringIds.get(name_idx).string_data);
                 dexMethodIds.add(dexMethodId);
             }
         } catch (IOException e) {
@@ -167,11 +167,11 @@ public class DexParser {
                 log("class[%d]: %s", i, dexClass.toString());
                 dexClasses.add(dexClass);
 
-                log("   classIdx: %s", dexTypes.get(class_idx).string_data);
+                log("   classIdx: %s", dexTypeIds.get(class_idx).string_data);
                 log("   accessFlags: %d", access_flags);
-                log("   superClassIdx: %s", dexTypes.get(superclass_idx).string_data);
+                log("   superClassIdx: %s", dexTypeIds.get(superclass_idx).string_data);
                 log("   interfaceOff: %d", interfaces_off);
-                log("   sourceFileIdx: %s", dexStrings.get(source_file_idx).string_data);
+                log("   sourceFileIdx: %s", dexStringIds.get(source_file_idx).string_data);
 
                 parseClassData(class_data_off);
             }
@@ -196,8 +196,8 @@ public class DexParser {
             int access_flags = Utils.readUnsignedLeb128(dexData, POSITION);
             EncodedField encodedField = new EncodedField(field_idx, access_flags);
             DexFieldId dexFieldId = dexFieldIds.get(field_idx);
-            log("   static field[%d]: %s->%s;%s", i, dexTypes.get(dexFieldId.class_idx).string_data,
-                    dexStrings.get(dexFieldId.name_idx).string_data, dexTypes.get(dexFieldId.type_idx).string_data);
+            log("   static field[%d]: %s->%s;%s", i, dexTypeIds.get(dexFieldId.class_idx).string_data,
+                    dexStringIds.get(dexFieldId.name_idx).string_data, dexTypeIds.get(dexFieldId.type_idx).string_data);
         }
 
         // instance field
@@ -206,8 +206,8 @@ public class DexParser {
             int access_flags = Utils.readUnsignedLeb128(dexData, POSITION);
             EncodedField encodedField = new EncodedField(field_idx, access_flags);
             DexFieldId dexFieldId = dexFieldIds.get(field_idx);
-            log("   instance field[%d]: %s->%s;%s", i, dexTypes.get(dexFieldId.class_idx).string_data,
-                    dexStrings.get(dexFieldId.name_idx).string_data, dexTypes.get(dexFieldId.type_idx).string_data);
+            log("   instance field[%d]: %s->%s;%s", i, dexTypeIds.get(dexFieldId.class_idx).string_data,
+                    dexStringIds.get(dexFieldId.name_idx).string_data, dexTypeIds.get(dexFieldId.type_idx).string_data);
         }
 
         // direct method
@@ -218,8 +218,8 @@ public class DexParser {
 
             EncodedMethod encodedMethod = new EncodedMethod(method_idx, access_flags, code_off);
             DexMethodId dexMethodId = dexMethodIds.get(method_idx);
-            log("   direct method[%d]: %s proto[%d] %s", i, dexTypes.get(dexMethodId.class_idx).string_data,
-                    dexMethodId.proto_idx, dexStrings.get(dexMethodId.name_idx).string_data);
+            log("   direct method[%d]: %s proto[%d] %s", i, dexTypeIds.get(dexMethodId.class_idx).string_data,
+                    dexMethodId.proto_idx, dexStringIds.get(dexMethodId.name_idx).string_data);
 
             parseDexCode(code_off);
         }
@@ -232,8 +232,8 @@ public class DexParser {
 
             EncodedMethod encodedMethod = new EncodedMethod(method_idx, access_flags, code_off);
             DexMethodId dexMethodId = dexMethodIds.get(method_idx);
-            log("   virtual method[%d]: %s proto[%d] %s", i, dexTypes.get(dexMethodId.class_idx).string_data,
-                    dexMethodId.proto_idx, dexStrings.get(dexMethodId.name_idx).string_data);
+            log("   virtual method[%d]: %s proto[%d] %s", i, dexTypeIds.get(dexMethodId.class_idx).string_data,
+                    dexMethodId.proto_idx, dexStringIds.get(dexMethodId.name_idx).string_data);
 
             parseDexCode(code_off);
         }

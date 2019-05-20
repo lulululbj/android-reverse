@@ -6,6 +6,12 @@ package luyao.parser.dex.bean;
  */
 public class DexMethodId {
 
+//    struct DexMethodId {
+//        u2  classIdx;           /* index into typeIds list for defining class */
+//        u2  protoIdx;           /* index into protoIds for method prototype */
+//        u4  nameIdx;            /* index into stringIds for method name */
+//    };
+
     public int class_idx; // 指向 type_ids
     public int proto_idx; // 指向 proto_ids
     public int name_idx; // 指向 string_ids
