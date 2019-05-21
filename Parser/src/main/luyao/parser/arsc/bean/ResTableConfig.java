@@ -15,8 +15,9 @@ public class ResTableConfig {
     public void parse(BytesReader reader) throws IOException {
         this.size = reader.readInt();
         this.data = new char[size];
-        reader.skip(size - 4);
-//        for (int i = 4; i < size-4; i++) {
+        reader.skip(size-4);
+//        data[0]= (char) size;
+//        for (int i = 1; i < size; i++) {
 //            data[i] = (char) reader.readByte();
 //        }
     }

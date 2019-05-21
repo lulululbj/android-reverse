@@ -10,13 +10,23 @@ import java.io.IOException;
  */
 public class ResTableHeader {
 
-    public ResChunkHeader resChunkHeader;
-    public int packageCount;
+    /*
+       struct ResTable_header
+       {
+           struct ResChunk_header header;
 
-    public void parse(BytesReader reader){
+           // The number of ResTable_package structures.
+           uint32_t packageCount;
+       };
+     */
+
+    public ResChunkHeader resChunkHeader;
+    public int packageCount; // 被编译的资源包的个数
+
+    public void parse(BytesReader reader) {
         try {
-            resChunkHeader=new ResChunkHeader(reader);
-            packageCount=reader.readInt();
+            resChunkHeader = new ResChunkHeader(reader);
+            packageCount = reader.readInt();
         } catch (IOException e) {
             e.printStackTrace();
         }

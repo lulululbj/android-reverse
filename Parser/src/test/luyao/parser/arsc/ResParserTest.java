@@ -13,7 +13,7 @@ public class ResParserTest {
 
     @Test
     public void parse() {
-        File file = new File("resources/resources.arsc");
+        File file = new File("resources/resources_wan.arsc");
         ResParser resParser = new ResParser(file);
         resParser.parse();
     }

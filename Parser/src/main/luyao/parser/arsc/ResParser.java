@@ -68,15 +68,25 @@ public class ResParser {
             for (int i = 0; i < stringPoolHeader.stringCount; i++) {
                 int u16len = reader.read(position + stringOffsets.get(i), 1)[0];
                 int u8len = reader.read(position + stringOffsets.get(i), 1)[0];
+                int length = 0;
+                int skipLength = 0;
+                if (stringPoolHeader.flags == ResStringPoolHeader.UTF8_FLAG) {
+                    length = u8len;
+                    skipLength = 1; // 如果是 utf-8，则字符串以 0x00结尾
+                } else {
+                    length = u16len;
+                    skipLength = 2; // 如果是 utf-16，则字符串以 0x0000结尾
+                }
                 String string = "";
                 try {
-                    string = new String(reader.read(position + stringOffsets.get(i) + 2, u8len + 1));
+                    string = new String(reader.read(position + stringOffsets.get(i) + 2, u8len));
+                    reader.skip(skipLength);
                 } catch (Exception e) {
                     log("   parse string[%d] error!", i);
                 }
 
                 stringPoolList.add(string);
-                log("   stringPool[%d]: %s", i, string);
+//                log("   stringPool[%d]: %s", i, string);
             }
 
             for (int i = 0; i < stringPoolHeader.styleCount; i++) {
@@ -129,7 +139,7 @@ public class ResParser {
                         break;
 
                     case ResType.RES_TABLE_TYPE_TYPE:
-                        ResTableType resTableType = new ResTableType();
+                        ResTableType resTableType = new ResTableType(resChunkHeader);
                         resTableType.parse(reader);
                         tableTypeList.add(resTableType);
                         break;

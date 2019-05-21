@@ -22,4 +22,14 @@ public class ResValue {
         this.dataType = reader.readByte();
         this.data = reader.readInt();
     }
+
+    @Override
+    public String toString() {
+        return "ResValue{" +
+                "size=" + size +
+                ", res0=" + res0 +
+                ", dataType=" + dataType +
+                ", data=" + data +
+                '}';
+    }
 }
