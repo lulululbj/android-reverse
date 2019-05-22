@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="id" name="textView1">false</item>
+    <item type="id" name="edit_username">false</item>
+    <item type="id" name="edit_sn">false</item>
+    <item type="id" name="button_answer">false</item>
+    <item type="id" name="button_register">false</item>
+    <item type="id" name="menu_settings">false</item>
+</resources>

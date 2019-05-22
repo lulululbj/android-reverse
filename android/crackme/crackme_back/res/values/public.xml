@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <public type="drawable" name="ic_launcher" id="0x7f020001" />
+    <public type="drawable" name="ic_action_search" id="0x7f020000" />
+    <public type="layout" name="activity_main" id="0x7f030000" />
+    <public type="dimen" name="padding_small" id="0x7f040000" />
+    <public type="dimen" name="padding_medium" id="0x7f040001" />
+    <public type="dimen" name="padding_large" id="0x7f040002" />
+    <public type="string" name="app_name" id="0x7f050000" />
+    <public type="string" name="menu_settings" id="0x7f050001" />
+    <public type="string" name="title_activity_main" id="0x7f050002" />
+    <public type="string" name="info" id="0x7f050003" />
+    <public type="string" name="username" id="0x7f050004" />
+    <public type="string" name="sn" id="0x7f050005" />
+    <public type="string" name="register" id="0x7f050006" />
+    <public type="string" name="hint_username" id="0x7f050007" />
+    <public type="string" name="hint_sn" id="0x7f050008" />
+    <public type="string" name="unregister" id="0x7f050009" />
+    <public type="string" name="registered" id="0x7f05000a" />
+    <public type="string" name="unsuccessed" id="0x7f05000b" />
+    <public type="string" name="successed" id="0x7f05000c" />
+    <public type="string" name="answer" id="0x7f05000d" />
+    <public type="style" name="AppTheme" id="0x7f060000" />
+    <public type="menu" name="activity_main" id="0x7f070000" />
+    <public type="id" name="textView1" id="0x7f080000" />
+    <public type="id" name="edit_username" id="0x7f080001" />
+    <public type="id" name="edit_sn" id="0x7f080002" />
+    <public type="id" name="button_answer" id="0x7f080003" />
+    <public type="id" name="button_register" id="0x7f080004" />
+    <public type="id" name="menu_settings" id="0x7f080005" />
+</resources>
