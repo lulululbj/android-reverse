@@ -1,7 +1,6 @@
 package luyao.parser.arsc.bean;
 
 import luyao.parser.utils.BytesReader;
-import luyao.parser.utils.Reader;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -82,14 +81,14 @@ struct ResTable_type
                 int size = dataReader.readUnsignedShort();
                 int flags = dataReader.readUnsignedShort();
                 int resStringPoolIndex = dataReader.readInt();
-                if (flags == 1) {
+                if (flags == 0) {
+                    ResValue resValue = new ResValue();
+                    resValue.parse(dataReader);
+                    log("ResValue : %s", resValue.toString());
+                } else {
                     ResTableMapEntry resTableMapEntry = new ResTableMapEntry(size, flags, resStringPoolIndex);
                     resTableMapEntry.parse(dataReader);
                     resTableEntryList.add(resTableMapEntry);
-                } else if (flags == 0) {
-                    ResValue resValue = new ResValue();
-                    resValue.parse(dataReader);
-                    log("ResValue : %s",resValue.toString());
                 }
             }
 

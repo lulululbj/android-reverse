@@ -46,9 +46,9 @@ struct ResTable_package
     public ResChunkHeader chunkHeader;
     public int id; // 包的ID,等于Package Id,一般用户包的值Package Id为0X7F,系统资源包的Package Id为0X01。
     public String name;  // 包名称
-    public int typeStrings; // 资源类型字符串池相对头部的偏移
+    public int typeStrings; // 资源类型字符串池在 ResTablePackage 中的偏移量
     public int lastPublicType; // 最后一个导出的Public类型字符串在类型字符串资源池中的索引，目前这个值设置为类型字符串资源池的元素个数。
-    public int keyStrings; // 资源名称字符池相对头部的偏移
+    public int keyStrings; // 资源名称字符池在 ResTablePackage 中的偏移
     public int lastPublicKey; // 最后一个导出的Public资源名称字符串在资源项名称字符串资源池中的索引，目前这个值设置为资源项名称字符串资源池的元素个数。
 
 

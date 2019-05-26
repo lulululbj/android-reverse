@@ -10,6 +10,12 @@ import java.io.IOException;
  */
 public class ResTableMap {
 
+//    struct ResTable_map
+//    {
+//        ResTable_ref name; // 资源名称
+//        Res_value value; // 资源值
+//    }
+
     public int resTableRefName;
     public ResValue resValue;
 
